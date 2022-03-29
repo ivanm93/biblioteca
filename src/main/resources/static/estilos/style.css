@@ -1,0 +1,82 @@
+body, header, img {
+    width: 1440px;
+    margin-left:  auto !important;
+    margin-right: auto !important;
+
+}
+
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+
+}
+.titulo{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:saddlebrown;
+    font-size: 70px;
+    font-family: 'Ramaraja', serif;
+    font-weight: bolder;
+    font-style: italic;
+    text-shadow: 0 0 10px whitesmoke;
+    -webkit-text-stroke: 0.1px black;
+
+}
+.boton1{
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    font-size: 60px;
+    color:saddlebrown !important;
+    font-family: 'Ramaraja', serif;
+    font-weight: bolder;
+    font-style: italic;
+    text-shadow: 0 0 10px whitesmoke;
+    -webkit-text-stroke: 0.1px black;
+}
+.boton2{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    font-size: 60px;
+    color:saddlebrown !important;
+    font-family: 'Ramaraja', serif;
+    font-weight: bolder;
+    font-style: italic;
+    text-shadow: 0 0 10px whitesmoke;
+    -webkit-text-stroke: 0.1px black;
+}
+.boton3{
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    font-size: 60px;
+    color:saddlebrown !important;
+    font-family: 'Ramaraja', serif;
+    font-weight: bolder;
+    font-style: italic;
+    text-shadow: 0 0 10px whitesmoke;
+    -webkit-text-stroke: 0.1px black;
+}
+label{
+    width: 80px;
+    margin: 10px;
+}
+a{
+    color: white !important; 
+    text-decoration: none !important;
+    font-family: 'Ramaraja', serif !important;
+    margin: 5px;
+
+}
+h2{
+    color: black;
+}
+input, select {
+    width: 190px;
+}
+
+
