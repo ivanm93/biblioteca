@@ -44,22 +44,18 @@
         <h2 class="navbar-text" >Editar editorial</h2>
 
         <form action="/editorial/guardareditorialeditado" th:object="${editorial}" method="POST">
-            <label for="" >ID:   </label>
-            <input type="text"  th:field="*{id}" name="id" ><br>
+        
             <label for="" >Nombre:   </label>
             <input type="text"  th:field="*{nombre}" name="nombre" ><br>
-            <label for="" class="formulario">Alta:  </label>
-            <select name="alta" >
-                <option value="1">true</option> 
-                <option value="2">false</option> 
-            </select><br>
+                   <input type="hidden"  th:field="*{id}" name="id" ><br>
+
             <div class="alert alert-success" role="alert" th:if="${exito}!=null">
                 <p th:text="${exito}"></p>
             </div>
             <div class="alert alert-danger" role="alert" th:if="${error}!=null">
                 <p th:text="${error}"></p>           
             </div>
-                       <a href="/editorial/listadeeditoriales">  <button class="btn btn-primary boton" type="button">Volver</button></a>
+                        <button class="btn btn-primary boton" type="button"><a href="/editorial/listadeeditoriales"> Volver</a></button>
             <button class="btn btn-primary boton" type="submit"> Guardar</button>
 
 

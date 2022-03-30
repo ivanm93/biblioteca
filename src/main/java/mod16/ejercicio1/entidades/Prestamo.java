@@ -12,10 +12,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.hibernate.annotations.GenericGenerator;
-import org.springframework.data.jpa.repository.Temporal;
-import org.springframework.format.annotation.DateTimeFormat;
+
 
 /**
  *
@@ -28,8 +28,9 @@ public class Prestamo {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
       private String id;
       
+      @Temporal(TemporalType.DATE)
       private Date fechaPrestamo;
-   
+      @Temporal(TemporalType.DATE)
       private Date fechaDevolucion;
       private Boolean alta;
       @OneToOne
