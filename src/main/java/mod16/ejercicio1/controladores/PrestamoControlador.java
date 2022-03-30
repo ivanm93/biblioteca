@@ -59,8 +59,8 @@ public class PrestamoControlador {
     }
 
     @PostMapping("/registrarprestamo")
-    public String registrarPrestamo(ModelMap modelo,@RequestParam("fechaPrestamo")  @DateTimeFormat(pattern = "yyyy-MM-dd") Date fechaPrestamo,
-            @RequestParam("fechaDevolucion") @DateTimeFormat(fallbackPatterns ="yyyy-MM-dd") Date fechaDevolucion, @RequestParam String nombreLibro,@RequestParam String nombreCliente) {
+    public String registrarPrestamo(ModelMap modelo, @DateTimeFormat(pattern = "yyyy-MM-dd") Date fechaPrestamo,
+            @DateTimeFormat(fallbackPatterns ="yyyy-MM-dd") Date fechaDevolucion, @RequestParam String nombreLibro,@RequestParam String nombreCliente) {
   
         try {
             prestamoservicio.agregarPrestamo(fechaPrestamo, fechaDevolucion, nombreLibro, nombreCliente);
@@ -95,8 +95,8 @@ public class PrestamoControlador {
     }
 
     @PostMapping("/guardarprestamoeditado")
-    public String guardarPrestamoEditado(ModelMap modelo, @RequestParam String id, @RequestParam("fechaPrestamo")  @DateTimeFormat(pattern = "yyyy-MM-dd") Date fechaPrestamo,
-            @RequestParam("fechaDevolucion") @DateTimeFormat(fallbackPatterns ="yyyy-MM-dd") Date fechaDevolucion, String nombreLibro, String nombreCliente) throws ErrorServicio {
+    public String guardarPrestamoEditado(ModelMap modelo, @RequestParam String id, @DateTimeFormat(pattern = "yyyy-MM-dd") Date fechaPrestamo,
+             @DateTimeFormat(fallbackPatterns ="yyyy-MM-dd") Date fechaDevolucion, String nombreLibro, String nombreCliente) throws ErrorServicio {
         try {
             prestamoservicio.modificarPrestamo(id, fechaPrestamo, fechaDevolucion, nombreLibro, nombreCliente);
             modelo.put("exito", "Guardado con exito");
